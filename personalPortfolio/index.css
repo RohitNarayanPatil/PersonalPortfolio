@@ -1,0 +1,470 @@
+
+*{
+    margin:0;        
+    padding:0;        
+}
+body{
+background-color: black;
+color: rgb(255, 255, 255);
+font-family: poppins;
+}
+
+nav{
+    position: sticky;
+display: flex;
+justify-content: space-around;
+align-items: center;
+height: 80px;
+background-color: rgb(19, 40, 84);
+color: aliceblue;
+}
+nav ul {
+display: flex;
+justify-content: center;
+}
+nav ul li{
+list-style: none;
+margin: 0 23px;  
+
+}
+nav ul li a{
+text-decoration: none;
+color: white;
+
+}
+nav ul li a:hover{
+color: rgb(171, 171, 228);
+font-size: 1.04rem;
+
+}
+.left{
+font-size: 1.5rem;
+}
+.firstsection{
+display: flex;
+justify-content: space-around;
+margin: 120px 0;
+align-items: center;
+}
+.firstsection > div{
+width: 40%;
+}
+.leftsection{   
+font-size: 3rem; 
+}
+.leftsection .btn{   
+padding:12px;
+background: black;
+color: white;
+border:2px solid white;
+border-radius: 6px;
+font-size: 20px;
+cursor: pointer;
+}
+.leftsection .buttons{   
+padding: 50px 0;
+}
+
+.rightsection img{
+width: 80%;
+}
+.purple{
+color: rgb(144, 50, 191);
+}
+#element{
+color: rgb(144, 50, 191);
+}
+.secondsection{
+max-width: 90vw;
+height: 140vh;
+margin: 120px 50px;
+}
+
+#second1section{
+  margin: 120px 40px;
+}
+
+main hr{
+border:0;
+background: grey;
+height: 1px;
+margin: 0px 0px;
+margin-top: 120px;
+
+}
+.secondsection h1 {
+
+  text-align: center;
+}
+.secondsection h1{
+  
+font-size: 1.8rem;
+margin: auto;
+/* height: 80vh; */
+}
+.text-gray{
+color: gray;
+}
+.secondsection .box{
+background: white;
+width: 1200px;
+height: 2px;
+margin: 20px 0;
+display: flex;
+
+}
+.secondsection .vertical{
+height: 50px;    
+width: 2px;
+background-color: white;
+margin:0  150px ;
+
+}
+.image-top{
+width:23px;
+position: relative;
+top: -32px;
+left: -9px;
+}
+.vertical-title{
+position: relative;
+top: 30px;
+width: 250px;
+font-size: 22px;
+}
+.vertical-desc{
+position: relative;
+top: 30px;
+width: 150px;
+font-size: 20px;
+}
+.footer{
+  background-color: purple;
+  position: sticky;
+  margin-top: 1570px;
+display: flex;
+padding: 23px 123px;
+justify-content:space-evenly ;
+}
+.footer ul{
+list-style: none;
+}
+.footer > div{
+width: 223px;
+}
+footer .footer-rights{
+text-align: center;
+padding: 12px 0;
+}
+
+
+.workexp{
+  
+    margin-top: 225px;
+    font-size: 18px;
+}
+.desc{
+    margin: 10px 0px;
+    width: 1300px;
+  
+ 
+}
+
+.fix {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100; /* This keeps the navbar above other content */
+  }
+  .fix {
+    height: 70px; /* Adjust this value to your navbar height */
+  }
+
+  .pro1{
+    justify-content: center;
+    margin: 65px 50px;
+    align-items: center;
+  }
+
+  
+
+  .t1{
+ display: flex;
+ padding: 20px;
+ justify-content: center;
+ align-items: center;
+  }
+
+  .t2{
+ display: flex;
+ padding: 20px;
+  }
+
+
+  div > h3{
+    display: flex;
+    margin-left: 60px;
+    margin: 0px 25px;
+  }
+
+
+  /* progress bar css starts here */
+  @keyframes progress {
+    0% { --percentage: 0; }
+    100% { --percentage: var(--value); }
+  }
+  
+  @property --percentage {
+    syntax: '<number>';
+    inherits: true;
+    initial-value: 0;
+  }
+  
+  [role="progressbar"] {
+    --percentage: var(--value);
+    --primary: #369;
+    --secondary: #adf;
+    --size: 90px;
+    animation: progress 2s 0.5s forwards;
+    width: var(--size);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+  }
+  
+  [role="progressbar"]::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: conic-gradient(var(--primary) calc(var(--percentage) * 1%), var(--secondary) 0);
+    mask: radial-gradient(white 55%, transparent 0);
+    mask-mode: alpha;
+    -webkit-mask: radial-gradient(#0000 55%, #000 0);
+    -webkit-mask-mode: alpha;
+  }
+  
+  [role="progressbar"]::after {
+    counter-reset: percentage var(--value);
+    content: counter(percentage) '%';
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: calc(var(--size) / 5);
+    color: var(--primary);
+  }
+
+
+  /* card
+   */
+   article {
+    --img-scale: 1.001;
+    --title-color: black;
+    --link-icon-translate: -20px;
+    --link-icon-opacity: 0;
+    position: relative;
+    border-radius: 16px;
+    box-shadow: none;
+    background: #fff;
+    transform-origin: center;
+    transition: all 0.4s ease-in-out;
+    overflow: hidden;
+  }
+  
+  article a::after {
+    position: absolute;
+    inset-block: 0;
+    inset-inline: 0;
+    cursor: pointer;
+    content: "";
+  }
+  
+  /* basic article elements styling */
+  article h2 {
+    margin: 0 0 18px 0;
+    font-family: "Bebas Neue", cursive;
+    font-size: 1.9rem;
+    letter-spacing: 0.06em;
+    color: var(--title-color);
+    transition: color 0.3s ease-out;
+  }
+  
+  figure {
+    margin: 0;
+    padding: 0;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+  }
+  
+  article img {
+    max-width: 100%;
+    transform-origin: center;
+    transform: scale(var(--img-scale));
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .article-body {
+    padding: 24px;
+  }
+  
+  article a {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: #28666e;
+  }
+  
+  article a:focus {
+    outline: 1px dotted #28666e;
+  }
+  
+  article a .icon {
+    min-width: 24px;
+    width: 24px;
+    height: 24px;
+    margin-left: 5px;
+    transform: translateX(var(--link-icon-translate));
+    opacity: var(--link-icon-opacity);
+    transition: all 0.3s;
+  }
+  
+  /* using the has() relational pseudo selector to update our custom properties */
+  article:has(:hover, :focus) {
+    --img-scale: 1.1;
+    --title-color: #28666e;
+    --link-icon-translate: 0;
+    --link-icon-opacity: 1;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  }
+  
+  
+  /************************ 
+  Generic layout (demo looks)
+  **************************/
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+
+  
+  .articles {
+    display: grid;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: 24px;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 24px;
+  }
+  
+  @media screen and (max-width: 960px) {
+    article {
+      container: card/inline-size;
+    }
+    .article-body p {
+      display: none;
+    }
+  }
+  
+  @container card (min-width: 380px) {
+    .article-wrapper {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 16px;
+    }
+    .article-body {
+      padding-left: 0;
+    }
+    figure {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    figure img {
+      height: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+    }
+  }
+  
+  .sr-only:not(:focus):not(:active) {
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
+  }
+
+  .article-body > p{
+    color: #000;
+  }
+
+  .p12 > h1{
+    margin:20px 20px;
+    text-align: center;
+  }
+
+
+  /* form 
+   */
+
+.contact-form-container {
+    width: 600px; /* Adjust width as needed */
+    margin: 75px 330px;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #fff; /* Adjust form background color */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #000;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: none;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50; /* Adjust button color */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form-container {
+  width: 574px;
+  margin: 110px -287px;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
